@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+public delegate int operation(int p, int q);
+namespace lab7
+{
+ class delegates
+ {
+ public static int AddNum(int p, int q)
+ {
+ return (p + q);
+ }
+ public int MultiNum(int p, int q)
+ {
+ return (p * q);
+ }
+ static void Main(string[] args)
+ {
+ operation op1 = new operation(AddNum);
+ Console.WriteLine("Addition of two numbers :{0}", op1(10, 20));
+ delegates d = new delegates();
+ operation op2 = new operation(d.MultiNum);
+ Console.WriteLine("multiplication of two numbers :{0}", op2(5,2));
+ Console.ReadLine();
+ }
+ }
+}
