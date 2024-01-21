@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace lab6
+{
+    class Base
+    {
+        public virtual void show()
+        {
+            Console.WriteLine("showing the base class");
+        }
+    }
+    class Derived : Base
+    {
+        public override void show()
+        {
+            Console.WriteLine("Showing the derived class");
+        }
+    }
+    class demo
+    {
+        static void Main(string[] args)
+        {
+            Base b = new Base();
+            b.show();
+            Derived d = new Derived();
+            d.show();
+            Base b1 = new Derived();
+            b1.show();
+            Console.ReadLine();
+        }
+    }
+}
