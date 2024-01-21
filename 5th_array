@@ -1,0 +1,19 @@
+using System;
+ 
+class sqrtnum
+{
+    static void Main(string[] args)
+    {
+        int[] arr = { 10, 20, 30, 40 };
+        try
+        {
+            Console.WriteLine(arr[3]);
+
+        }
+        catch(Exception e) 
+        {
+            Console.WriteLine(e);
+        }
+        finally { Console.WriteLine("Array length is : "+arr.Length); }
+    }
+}
