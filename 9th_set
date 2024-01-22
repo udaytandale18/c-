@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace lab9
+{
+ class Person
+ {
+ string name;
+ int age;
+ public string pername
+ {
+ get { return name; }
+ set { name = value; }
+ }
+ public int perage
+ {
+ get { return age; }
+ set { age = value; }
+ }
+ }
+ class demo
+ {
+ static void Main(string[] args)
+ {
+ Person p1 = new Person();
+ Console.WriteLine("Enter the name of a person");
+ p1.pername = Console.ReadLine();
+ Console.WriteLine("Enter the age of a person");
+ p1.perage = Convert.ToInt32(Console.ReadLine());
+ Console.WriteLine("Name of a person is:" + p1.pername);
+ Console.WriteLine("Age of a person is:" + p1.perage);
+ Console.ReadLine();
+ }
+ }
+}
