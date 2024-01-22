@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace lab10
+{
+ interface ishape
+ {
+ void draw();
+ }
+ class circle : ishape
+ {
+ public void draw()
+ {
+ Console.WriteLine("Drawing circle");
+ }
+ }
+ class square : ishape
+ {
+ public void draw()
+ {
+ Console.WriteLine("Drawing square");
+ }
+ }
+ class triangle : ishape
+ {
+ public void draw()
+ {
+ Console.WriteLine("Drawing triangle");
+ }
+ }
+ class hexagon : ishape
+ {
+ public void draw()
+ {
+ Console.WriteLine("Drawing hexagon");
+ }
+ }
+ class Program
+ {
+ static void Main(string[] args)
+ {
+ ishape[] shape = { new circle(), new square(), new triangle(), 
+new hexagon() };
+ foreach (ishape s in shape)
+ s.draw();
+ Console.ReadLine();
+ }
+ }
+}
