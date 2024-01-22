@@ -1,0 +1,42 @@
+sing System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace lab8
+{
+ abstract class shape
+ {
+ protected float l, b;
+ public abstract float Area();
+ public abstract float Circumference();
+ }
+ class Rectangle : shape
+ {
+ public void getlb()
+ {
+ Console.WriteLine("Enter the length");
+ l = float.Parse(Console.ReadLine());
+ Console.WriteLine("Enter the Breadth");
+ b = float.Parse(Console.ReadLine());
+ }
+ public override float Area()
+ {
+ return l * b;
+ }
+ public override float Circumference()
+ {
+ return 2 * (l + b);
+ }
+ }
+ class demo
+ {
+ static void Main(string[] args)
+ {
+ Rectangle r = new Rectangle();
+ r.getlb();
+ Console.WriteLine("The area is" + r.Area());
+ Console.WriteLine("The circumference is" + r.Circumference());
+ Console.ReadLine();
+ }
+ }
+}
