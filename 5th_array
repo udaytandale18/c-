@@ -1,19 +1,31 @@
 using System;
- 
-class sqrtnum
+using System.Xml.Schema;
+class program
 {
     static void Main(string[] args)
     {
-        int[] arr = { 10, 20, 30, 40 };
+        int i, leng,ind;
+        Console.WriteLine("Enter the number for array ");
+        leng=int.Parse(Console.ReadLine());
+        int[] arr = new int[leng];
+        Console.WriteLine("Enter the array:");
+        for(i=0;i<leng; i++)
+            arr[i]=int.Parse(Console.ReadLine());
+        Console.WriteLine("Enterr the index");
+        ind=int.Parse (Console.ReadLine());
         try
         {
-            Console.WriteLine(arr[3]);
-
+            Console.WriteLine("the value is " + arr[ind]);
         }
-        catch(Exception e) 
+        catch (Exception e)
         {
-            Console.WriteLine(e);
+            Console.WriteLine("Arry out of bound");
         }
-        finally { Console.WriteLine("Array length is : "+arr.Length); }
+        finally {
+            Console.WriteLine("code is done");
+         
+        }
+        Console.ReadLine ();
+
     }
 }
